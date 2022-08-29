@@ -68,7 +68,7 @@ const data = [
     name: 'heling',
     category: 'decors',
     desc: 'This is a demo website for a interior decors agency named "Heling". You can see the designs. You can also serve as their portfolio. ',
-    github: 'https://github/Phenoo/Heling',
+    github: 'https://github.com/Phenoo/Heling',
     photo: Item5,
   },
   {
@@ -77,7 +77,7 @@ const data = [
     name: 'edd courses',
     category: 'education',
     desc: 'This is a demo website for a company that offers online courses. It was made with HTML, CSS, and JavaScript ',
-    github: 'https://github/Phenoo/edd-courses',
+    github: 'https://github.com/Phenoo/edd-courses',
     photo: Item6,
   },
   {
@@ -86,7 +86,7 @@ const data = [
     name: 'Ahaz',
     category: 'fashion',
     desc: 'This is a fashion brand named Ahaz. ',
-    github: 'https://github/Phenoo/Ahazz',
+    github: 'https://github.com/Phenoo/Ahazz',
     photo: Item7,
   },
   {
@@ -94,7 +94,7 @@ const data = [
     url: "https://setra-resturant.vercel.app/",
     name: 'setra resturant',
     desc: 'This is for a resturant where customers can go and know more about them and their services',
-    github: 'https://github/Phenoo/setra-resturant',
+    github: 'https://github.com/Phenoo/setra-resturant',
     photo: Item8,
   },
   {
@@ -102,7 +102,7 @@ const data = [
     url: "https://desgossip.netlify.app/",
     name: 'DesGossip',
     desc: 'This is a news outlet where you can browse about current news happening around the world. Note the version only request 10 requests per day so do not be suprised when it blanks.',
-    github: 'https://github/Phenoo/DesGossip',
+    github: 'https://github.com/Phenoo/DesGossip',
     photo: Item10,
   },
 ]

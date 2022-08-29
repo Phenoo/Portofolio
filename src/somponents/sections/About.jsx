@@ -3,7 +3,7 @@ import Item1 from '../../assets/images/hi.webp'
 
 import {SiFirebase, SiNotion} from 'react-icons/si'
 import {DiGit} from 'react-icons/di'
-import {FaReact, FaHtml5, FaCss3, FaJs} from 'react-icons/fa'
+import {FaReact, FaHtml5, FaCss3, FaJs, FaYinYang} from 'react-icons/fa'
 // import ParticlesComponent from './ParticlesComponent'
 
 const About = () => {
@@ -77,11 +77,16 @@ const About = () => {
             get resume
           </a>
         </div>
+        <div className='about-yingyang'>
+          <FaYinYang />
+        </div>
       </div>
-      {/* <ParticlesComponent /> */}
+
 
     </section>
   )
 }
 
 export default About
+
+

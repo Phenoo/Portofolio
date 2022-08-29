@@ -27,7 +27,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/eze-paschal-158457233">
                 linkedin
               </a>
-              <a href="https://wa.me/2349019703970?text=hey+desco+__">
+              <a href="https://wa.me/2349019703944?text=hey+desco+__">
                 whatsapp
               </a>
             </div>

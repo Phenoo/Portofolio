@@ -6,8 +6,9 @@ import {AiFillLinkedin, AiOutlineGithub} from 'react-icons/ai'
 import { FaTwitter, FaMedium, FaWhatsapp} from 'react-icons/fa'
 
 import Item1 from '../../assets/images/20086735.png'
+import Item2 from '../../assets/images/quality content.webp'
 
-const Container = styled.div`
+const Container = styled.nav`
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -18,25 +19,37 @@ position: relative;
   display: none;
 }
 
+h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
 #home{
   @media(max-width: 57em){
     display: flex;
   }
 }
 
-.active{
-  color: red;
+.nav-icon{
+  width: 15px;
 }
 
-button{
+.active{
+  color: #f53b3b;
+}
+
+.span{
   @media(max-width: 57em){
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #f53b3b;
-    width: 60px;
-    height: 60px;
     z-index: 100;
 
     div{
@@ -44,26 +57,17 @@ button{
       height: 2px;
       position: relative;
       background: #ddd;
-      transform: ${props => props.click ? 'rotate(45deg)' : 'rotate(0deg)'};
-
-      &::before{
-        content: '';
-        position: absolute;
-        top: 10px;
-        left: 0;
-        width: 25px;
-        height: 2px;
-        background: #ddd;
-        transform: ${props => props.click ? 'rotate(40deg)' : 'rotate(0)'} ;
-        
-      }
+      transition: all 300ms ease;
     }
+    .nav-stick{
+      position: absolute;
+      bottom: ${props => props.click ? '0' : '10px'};
     }
 }
 
 @media(max-width: 30em){
   h4{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -86,10 +90,11 @@ const MenuList = styled.div`
   bottom: 0;
   width: 100vw;
   max-height: 100vh;
+  overflow-y: hidden;
   z-index: 10;
   margin: 0;
   padding: 0;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-color: #111;
   transform: ${props => props.click ? 'translateX(0)' : 'translateX(1000%)'};
   transition: all 0.6s ease;
@@ -101,7 +106,7 @@ const MenuList = styled.div`
     flex-direction: row;
 
     li{
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
   #icon{
@@ -135,6 +140,10 @@ li{
 
   @media(max-width: 57em){
     font-size: 2rem;
+
+    @media(max-width: 25em){
+      font-size: 1.5rem;
+    }
   }
 
 }
@@ -146,15 +155,19 @@ const Navigation = () => {
   const [current, setCurrent] = useState(1);
   
   const handleClick = () => {
-    console.log("nav")
     setClick(!click);
   }
   return (
     <section>
       <Container>
         <Link to='/'>
-          <h4>
-            &copy; Code by Desco
+          <h4 onClick={() => setCurrent(1)} className={current === 1 ? 'active' : ''}>
+            <span>
+              <img src={Item2} alt="nav" className="nav-icon" />
+            </span>
+            <span>
+              Desco
+            </span>
           </h4>
         </Link>
         <MenuList click={click}>
@@ -197,7 +210,7 @@ const Navigation = () => {
             </a>
           </li>
           <li>
-          <a href="https://wa.me/2349019703970?text=hey+desco+__">
+          <a href="https://wa.me/2349019703944?text=hey+desco+__">
               <FaWhatsapp />
             </a>
           </li>
@@ -210,9 +223,13 @@ const Navigation = () => {
         <img src={Item1} alt="rah" id="icon" />
 
         </MenuList>
-        <button onClick={handleClick}>
-          <div click={click}></div>
-        </button>
+        <span onClick={handleClick} className={`span ${click ? 'twist' : ''}`} click={click}>
+          {/* {click ?  */}
+          {/* <FaTimes className='times' /> : */}
+            <div click={click} className='nav-sti'></div>
+            <div click={click} className='nav-stick'></div>
+        {/* } */}
+        </span>
 
       </Container>
     </section>

@@ -20,10 +20,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #f53b3b;
-}
-
 section {
     width: 85%;
     margin: 0 auto;

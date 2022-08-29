@@ -1,7 +1,5 @@
 import React from 'react'
 import Item1 from '../../assets/images/haiii.webp'
-import Item2 from '../../assets/images/quality content.webp'
-import ParticlesComponent from './ParticlesComponent'
 
 const Home = () => {
   return (
@@ -18,9 +16,7 @@ const Home = () => {
           <h6>
             from nigeria
           </h6>
-          <img src={Item2} alt="bg" className="icon"/>
         </div>
-        <ParticlesComponent />
       </div>
     </section>
   )

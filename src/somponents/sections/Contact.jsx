@@ -1,6 +1,10 @@
 import React from 'react'
 import {FaArrowLeft} from 'react-icons/fa'
 import Item1 from '../../assets/images/we need to talk.webp'
+
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
+import {GoLocation} from 'react-icons/go'
+
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,17 +27,32 @@ const Contact = () => {
           <h6>
             contact details
           </h6>
-          <p>
-          descometusah@gmail.com
-          </p>
-          <p>
+          <div>
+            <span>
+              <AiOutlineMail />
+            </span>
+            <p>
+            descometusah@gmail.com
+            </p>
+          </div>
+          <div>
+            <span>
+              <AiOutlinePhone />
+            </span>
+            <p>
             +234 703 517 2208
           </p>
-          <p>
-            Location: Nigeria
-          </p>
+          </div>
+          <div>
+            <span>
+              <GoLocation />
+            </span>
+            <p>
+              Location: Enugu, Nigeria
+            </p>
+          </div>
         </div>
-        <div className="contact-form">
+        <section className="contact-form">
           <form onSubmit={handleSubmit}>
             <div className="form-input">
               <label>
@@ -69,7 +88,7 @@ const Contact = () => {
               <p>send it</p>
             </button>
           </form>
-        </div>
+        </section>
       </div>
 
 

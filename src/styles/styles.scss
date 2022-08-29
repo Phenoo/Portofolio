@@ -58,7 +58,7 @@ button {
 
 .text {
     font-family: $jost;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: right;
     h1 {
         font-size: 2.5rem;
@@ -106,12 +106,15 @@ button {
 
 .projects-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 2rem 0;
     gap: 1rem;
 }
 
 .project-box {
-    width: 300px;
+    width: 330px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -150,14 +153,23 @@ button {
         transform: scale(0.9);
         transition: $transition;
     }
+    .tools {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        .tool-item {
+            color: $text-color;
+        }
+    }
 }
 
 .see-more {
+    display: flex;
+    align-items: center;
     background: $bg-color;
     color: $text-color;
-    padding: 0.7rem;
     text-transform: capitalize;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     text-align: center;
     border-radius: 5px;
     transition: $transition;
@@ -170,13 +182,15 @@ button {
     }
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    width: auto;
+.yingyang {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    svg {
+        color: $bg-color;
+        font-size: 3rem;
+        animation: cycle infinite 1.5s linear;
+    }
 }
 
 .collab-container {
@@ -224,10 +238,10 @@ button {
     .circle {
         position: absolute;
         right: 10px;
-        bottom: 50px;
+        bottom: 20px;
+        border: none;
     }
-    button {
-        background: none;
+    .collab-link {
         padding: 0.7rem;
         color: $text-color;
         border: 1px solid $text-color;
@@ -245,28 +259,12 @@ button {
 .btn {
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 }
 
-.swiper-btn {
-    background: $text-color;
-    color: $bg-color;
-    padding: 0.7rem;
-    text-transform: capitalize;
-    animation: pump 1s infinite linear;
-    border-radius: 5px;
-    cursor: not-allowed;
-    transition: $transition;
-}
-
-@keyframes pump {
-    0% {
-        transform: scale(0.8);
-    }
-    50% {
-        transform: scale(0.85);
-    }
+@keyframes cycle {
     100% {
-        transform: scale(0.9);
+        transform: rotate(1turn);
     }
 }
 
@@ -303,7 +301,17 @@ button {
 }
 
 .about-container {
-    height: 80vh;
+    min-height: 80vh;
+    .about-yingyang {
+        text-align: right;
+        margin-top: 3rem;
+        svg {
+            font-size: 5rem;
+            color: $text-color;
+            width: 100px;
+            animation: cycle infinite 1.5s linear;
+        }
+    }
 }
 
 .tools-container {
@@ -311,6 +319,7 @@ button {
     .tools {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1rem;
         margin-top: 1rem;
         .item {
@@ -446,14 +455,25 @@ button {
 
 // CONTACT
 .contact-details {
+    margin-top: 2rem;
+    text-transform: capitalize;
+    p {
+        font-size: 0.9rem;
+    }
     h6 {
         color: #808080;
         text-transform: capitalize;
     }
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
 }
 
 .contact-form {
-    margin: 1rem 0;
+    margin-top: 2rem;
     form {
         font-family: "Poppins";
     }
@@ -478,7 +498,7 @@ button {
         font-size: 1rem;
         &::placeholder {
             color: #808080;
-            font-size: 1rem;
+            font-size: 0.7rem;
             text-transform: capitalize;
             font-family: "Poppins";
         }
@@ -519,10 +539,13 @@ button {
     }
     .collab-container {
         .circle {
-            bottom: 70px;
+            bottom: 55px;
         }
         button {
             font-size: 0.7rem;
+        }
+        .collab-link {
+            font-size: 0.5rem;
         }
     }
 }
@@ -537,6 +560,9 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .circle {
+        width: 70px;
     }
     .work-container {
         h4 {
@@ -575,7 +601,61 @@ button {
     .projects h4 {
         font-size: 1rem;
     }
-    .project-box {
-        width: 250px;
+    .collab-container {
+        .circle {
+            bottom: 70px;
+        }
+    }
+    .collab {
+        h4 {
+            font-size: 1.25rem;
+        }
+    }
+    footer {
+        a {
+            font-size: 0.7rem;
+        }
+        p {
+            font-size: 0.5rem;
+        }
+    }
+    .resume {
+        a {
+            font-size: 0.75rem;
+        }
+    }
+    .about-container {
+        .about-yingyang {
+            svg {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.twist {
+    .nav-sti {
+        position: absolute;
+        top: 15px;
+        transform: rotate(120deg);
+        transition: $transition;
+    }
+    .nav-stick {
+        bottom: 0;
+        transform: rotate(240deg);
+    }
+}
+
+@media (max-width: 22em) {
+    .circle {
+        width: 50px;
+        p {
+            font-size: 0.4rem;
+        }
+    }
+    .collab-container {
+        .circle {
+            bottom: 70px;
+        }
     }
 }

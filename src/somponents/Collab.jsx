@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaArrowLeft} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import Item1 from '../assets/images/lets discuss.webp'
 const Collab = () => {
   return (
@@ -17,16 +18,16 @@ const Collab = () => {
           </div>
         </div>
         <div className="divider"></div>
-        <div className="circle">
+        <Link to='/contact' className="circle">
           <p>get in touch</p>
-        </div>
+        </Link>
         <div className="contact">
-          <button>
+          <a href="mailto:descometusah@gmail.com" className="collab-link">
             descometusah@gmail.com
-          </button>
-          <button>
+          </a>
+          <a href="https://wa.me/2349019703944?text=hey+desco+__"  className="collab-link">
             +234 901 970 3944
-          </button>
+          </a>
         </div>
       </section>
     </div>
