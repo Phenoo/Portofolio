@@ -14,7 +14,7 @@ align-items: center;
 justify-content: space-between;
 padding: 1rem 0;
 position: relative;
-
+ 
 #icon, #home, button{
   display: none;
 }
@@ -223,9 +223,7 @@ const Navigation = () => {
         <img src={Item1} alt="rah" id="icon" />
 
         </MenuList>
-        <span onClick={handleClick} className={`span ${click ? 'twist' : ''}`} click={click}>
-          {/* {click ?  */}
-          {/* <FaTimes className='times' /> : */}
+        <span onClick={handleClick} className={`span ${click ? 'twist' : ''}`} click={click}> 
             <div click={click} className='nav-sti'></div>
             <div click={click} className='nav-stick'></div>
         {/* } */}
