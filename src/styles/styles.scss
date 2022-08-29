@@ -1,0 +1,581 @@
+$jost: "Jost";
+$red-color: #f53b3b;
+$text-color: #ddd;
+$bg-color: #111111;
+$transition: 300ms ease;
+p,
+h4,
+h6 {
+    font-family: $jost;
+}
+
+h4 {
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    font-family: "Source Sans Pro";
+    cursor: pointer;
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    font-family: $jost;
+    cursor: pointer;
+}
+
+.image {
+    img {
+        width: 250px;
+        height: 300px;
+        object-fit: contain;
+    }
+}
+
+.text {
+    font-family: $jost;
+    text-transform: capitalize;
+    text-align: right;
+    h1 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
+    img {
+        width: 50px;
+        aspect-ratio: 1/1;
+        // animation: cycle 9s infinite linear;
+    }
+}
+
+@keyframes cycle {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.detail-container,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+}
+
+.circle {
+    width: 150px;
+    aspect-ratio: 1/1;
+    background: $red-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.projects-container {
+    display: flex;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.project-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    background: #111;
+    color: #ddd;
+    padding: 1rem;
+    transition: $transition;
+    border-radius: 10px;
+    h6 {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+    }
+    p {
+        font-size: 0.7rem;
+    }
+    span {
+        text-transform: lowercase;
+        font-size: 0.7rem;
+        color: #808080;
+    }
+    .svg {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        svg {
+            font-size: 1.4rem;
+            transition: $transition;
+            &:hover {
+                transition: $transition;
+                color: #f53b3b;
+            }
+        }
+    }
+    &:hover {
+        transform: scale(0.9);
+        transition: $transition;
+    }
+}
+
+.see-more {
+    background: $bg-color;
+    color: $text-color;
+    padding: 0.7rem;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 5px;
+    transition: $transition;
+    &:hover {
+        background: $text-color;
+        color: $bg-color;
+        border: 1px solid $bg-color;
+        transform: scale(0.9);
+        transition: $transition;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: auto;
+}
+
+.collab-container {
+    margin: 2rem auto;
+}
+
+.collab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    h4 {
+        font-size: 3rem;
+    }
+    svg {
+        transform: rotate(315deg);
+    }
+    .collab-part {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.projects {
+    background: $red-color;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    h4 {
+        font-size: 2rem;
+    }
+    .desc {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.icon {
+    width: 150px;
+}
+
+.collab-container {
+    .circle {
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+    }
+    button {
+        background: none;
+        padding: 0.7rem;
+        color: $text-color;
+        border: 1px solid $text-color;
+        border-radius: 25px;
+        margin-right: 5px;
+        transition: $transition;
+        &:hover {
+            background: $text-color;
+            color: $bg-color;
+            transition: $transition;
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-btn {
+    background: $text-color;
+    color: $bg-color;
+    padding: 0.7rem;
+    text-transform: capitalize;
+    animation: pump 1s infinite linear;
+    border-radius: 5px;
+    cursor: not-allowed;
+    transition: $transition;
+}
+
+@keyframes pump {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(0.85);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.divider {
+    background: $text-color;
+    width: 100%;
+    height: 1px;
+    margin: 5rem 0;
+}
+
+.flex {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.footer {
+    width: 90%;
+    margin: 1rem auto;
+    a {
+        &:hover {
+            color: $red-color;
+        }
+    }
+}
+
+.foot-one {
+    display: flex;
+    align-items: center;
+}
+
+//ABOUT
+.about-section {
+    margin-top: 2rem;
+}
+
+.about-container {
+    height: 80vh;
+}
+
+.tools-container {
+    margin-top: 2rem;
+    .tools {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        .item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .html {
+            color: #9d4c4c;
+        }
+        .css {
+            color: #2427c4;
+        }
+        .java {
+            color: #ffff7e;
+        }
+        .react {
+            color: #53a4fb;
+        }
+        .firebase {
+            color: #ffa500;
+        }
+        .git {
+            color: #f53b3b;
+        }
+        svg {
+            cursor: pointer;
+            font-size: 1.4rem;
+            transform: scale(0.9);
+            transition: $transition;
+            &:hover {
+                opacity: 0.7;
+                transition: $transition;
+            }
+        }
+    }
+}
+
+.resume {
+    margin-top: 3rem;
+    a {
+        text-transform: capitalize;
+        background: $red-color;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        border-radius: 3px;
+        transition: $transition;
+        &:hover {
+            background: $text-color;
+            color: $red-color;
+            transition: $transition;
+        }
+    }
+}
+
+// WORK
+.work-container {
+    h4 {
+        font-size: 2rem;
+        text-align: right;
+    }
+    .enjoy {
+        text-align: right;
+    }
+    .foot {
+        margin-top: 2rem;
+    }
+}
+
+.work-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .works {
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            img {
+                transform: scale(0.9);
+                transition: $transition;
+            }
+            a {
+                transform: scale(0.9);
+            }
+        }
+        .work-item {
+            position: relative;
+            h1,
+            h2 {
+                font-size: 1.5rem;
+                font-family: "Roboto";
+                text-transform: uppercase;
+            }
+            p {
+                margin: 0.7rem 0;
+            }
+        }
+        img {
+            opacity: 0.7;
+            transition: $transition;
+        }
+        .direct-links {
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            transform: translateX(-50%, -45%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            a {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 50%;
+                background: $text-color;
+                color: $bg-color;
+                transition: $transition;
+                svg {
+                    font-size: 1.4rem;
+                }
+                &:hover {
+                    background: #111;
+                    color: $text-color;
+                    transition: $transition;
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+// CONTACT
+.contact-details {
+    h6 {
+        color: #808080;
+        text-transform: capitalize;
+    }
+}
+
+.contact-form {
+    margin: 1rem 0;
+    form {
+        font-family: "Poppins";
+    }
+    .form-input {
+        border-bottom: 1px solid $text-color;
+        // border-top: 1px solid #ddd;
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+    label {
+        display: block;
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
+    }
+    input,
+    textarea {
+        background: none;
+        border: none;
+        outline: none;
+        color: #808080;
+        font-size: 1rem;
+        &::placeholder {
+            color: #808080;
+            font-size: 1rem;
+            text-transform: capitalize;
+            font-family: "Poppins";
+        }
+        #textarea {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 50em) {
+    p {
+        font-size: 0.7rem;
+    }
+    section {
+        width: 90%;
+    }
+    .container {
+        flex-direction: column;
+        .image img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .text {
+        text-align: center;
+    }
+    .circle {
+        width: 100px;
+    }
+    .projects h4 {
+        font-size: 1.5rem;
+    }
+    .collab h4 {
+        font-size: 1.5rem;
+    }
+    .see-more {
+        padding: 0.5rem;
+    }
+    .collab-container {
+        .circle {
+            bottom: 70px;
+        }
+        button {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media (max-width: 40em) {
+    .icon {
+        width: 100px;
+    }
+    .image {
+        // background: repeating-linear-gradient(45deg, rgba(255, 56, 56, 0.7), rgba(255, 0, 0, 0.7) 10px, rgba(231, 231, 231, 0.3) 10px, 20px, rgba(255, 255, 255, 0.3) 5px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .work-container {
+        h4 {
+            font-size: 1.5rem;
+        }
+    }
+    .work-section {
+        .works {
+            .work-item {
+                h1,
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+            .direct-links {
+                a {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 31em) {
+    .text {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+    }
+    .detail-container {
+        flex-direction: column;
+    }
+    .projects h4 {
+        font-size: 1rem;
+    }
+    .project-box {
+        width: 250px;
+    }
+}
