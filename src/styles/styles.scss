@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Silkscreen&family=Josefin+Sans&family=Jost&family=Livvic&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Silkscreen&family=Josefin+Sans&family=Jost&family=Roboto&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
 $jost: "Jost";
 $red-color: #f53b3b;
 $text-color: #ddd;
@@ -48,21 +48,25 @@ img {
     width: 100vw;
     height: 100vh;
     background: #111;
-    z-index: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-    font-family: "Silkscreen";
-    text-transform: uppercase;
+    z-index: 100;
+    .loader-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        gap: 1rem;
+        font-family: "Silkscreen";
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
     .icon {
         width: 100px;
         height: 100px;
     }
     .yingyang {
         margin-right: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         svg {
             color: $red-color;
         }
@@ -148,7 +152,7 @@ button {
 
 .circle {
     width: 150px;
-    aspect-ratio: 1/1;
+    height: 150px;
     background: $red-color;
     border-radius: 50%;
     display: flex;
@@ -169,6 +173,7 @@ button {
     flex-wrap: wrap;
     margin: 2rem 0;
     gap: 1rem;
+    -webkit-column-gap: 1rem;
 }
 
 .project-box {
@@ -598,8 +603,16 @@ button {
     p {
         font-size: 0.7rem;
     }
-    section {
-        width: 90%;
+    .container {
+        min-height: 50vh;
+    }
+    .text {
+        h1 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.5rem;
+        }
     }
     .container {
         flex-direction: column;
@@ -613,6 +626,7 @@ button {
     }
     .circle {
         width: 100px;
+        height: 100px;
     }
     .projects h4 {
         font-size: 1.5rem;
@@ -649,6 +663,7 @@ button {
     }
     .circle {
         width: 70px;
+        height: 70px;
     }
     .work-container {
         h4 {
@@ -673,12 +688,16 @@ button {
 }
 
 @media (max-width: 31em) {
+    .container {
+        min-height: 45vh;
+    }
     .text {
         h1 {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         h4 {
-            font-size: 1.25rem;
+            font-size: 1rem;
+            margin: 0.2rem 0;
         }
     }
     .detail-container {
@@ -738,13 +757,22 @@ button {
 }
 
 @media (max-width: 22em) {
+    .container {
+        .image {
+            img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
     .text {
         h4 {
-            font-size: 1rem;
+            font-size: 0.7rem;
         }
     }
     .circle {
         width: 50px;
+        height: 50px;
     }
     .collab-container {
         .circle {

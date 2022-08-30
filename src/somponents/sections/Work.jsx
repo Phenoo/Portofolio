@@ -148,7 +148,7 @@ const Work = () => {
                     <p>{desc}</p>
                   </div>
                   <div className="tools">
-                    <h6>technologies</h6>
+                    <h6>technologies:</h6>
                             {tools?.map(tool => {
                               return <p className='tool-item'>#{tool}</p>
                             })}

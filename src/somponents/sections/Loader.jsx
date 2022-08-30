@@ -7,21 +7,23 @@ const Loader = () => {
   
   return (
     <div className="loader-container">
-      <img src={Item1} alt="logo"  className="icon"/>
-      <Typewriter
-        onInit={(typewriter) => {
-        typewriter.typeString("What do you have for me, amigo?")
-        .callFunction(() => {
-          console.log("What do you have for me")
-        })
-        .pauseFor(1000)
-        .deleteAll()
-        .callFunction(() => {
-          console.log("What do you have for me")
-        })
-        .start();
-      }}
-    />
+      <div className="loader-div">
+        <img src={Item1} alt="logo"  className="icon"/>
+        <Typewriter
+          onInit={(typewriter) => {
+          typewriter.typeString("What do you have for me, amigo?")
+          .callFunction(() => {
+            console.log("What do you have for me")
+          })
+          .pauseFor(1000)
+          .deleteAll()
+          .callFunction(() => {
+            console.log("What do you have for me")
+          })
+          .start();
+        }}
+      />
+      </div>
       <div className="yingyang">
         <FaYinYang />
       </div>
