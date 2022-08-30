@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Atomic+Age&family=Josefin+Sans&family=Jost&family=Livvic&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Silkscreen&family=Josefin+Sans&family=Jost&family=Livvic&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
 $jost: "Jost";
 $red-color: #f53b3b;
 $text-color: #ddd;
@@ -53,15 +53,16 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: "Roboto";
+    gap: 1rem;
+    font-family: "Silkscreen";
     text-transform: uppercase;
-    font-size: 1.25rem;
     .icon {
         width: 100px;
         height: 100px;
     }
     .yingyang {
-        margin-right: 1rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
         svg {
             color: $red-color;
         }
@@ -87,7 +88,7 @@ img {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    min-height: 70vh;
+    min-height: 57vh;
 }
 
 button {
@@ -112,7 +113,7 @@ button {
         font-size: 3rem;
     }
     h4 {
-        font-family: "Roboto";
+        font-family: "Silkscreen";
         font-size: 2rem;
         text-transform: uppercase;
     }

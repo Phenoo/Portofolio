@@ -32,6 +32,7 @@ const App = () => {
     });
     sr.reveal(
       `
+      .detail-container,
       .about-section,
       .collab-container,
       footer

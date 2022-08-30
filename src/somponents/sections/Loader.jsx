@@ -1,6 +1,6 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
-import Item1 from '../../assets/images/hi.webp'
+import Item1 from '../../assets/images/what up fam.webp'
 import { FaYinYang } from 'react-icons/fa'
 
 const Loader = () => {
@@ -10,7 +10,7 @@ const Loader = () => {
       <img src={Item1} alt="logo"  className="icon"/>
       <Typewriter
         onInit={(typewriter) => {
-        typewriter.typeString("What do you have for me, dawg?")
+        typewriter.typeString("What do you have for me, amigo?")
         .callFunction(() => {
           console.log("What do you have for me")
         })
@@ -22,9 +22,9 @@ const Loader = () => {
         .start();
       }}
     />
-    <div className="yingyang">
-      <FaYinYang />
-    </div>
+      <div className="yingyang">
+        <FaYinYang />
+      </div>
     </div>
   )
 }
