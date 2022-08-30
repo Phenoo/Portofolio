@@ -12,19 +12,22 @@ import Item9 from '../../assets/images/justice.png'
 import Item10 from '../../assets/images/gossip.png'
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
+import {BsInfoCircle} from 'react-icons/bs'
 
-import ScrollReveal from 'scrollreveal'
+import {motion} from 'framer-motion'
 
-ScrollReveal().reveal('.works')
+
 const data = [
   {
     id: '01',
     url: "https://alba-sports.vercel.app/",
     name: 'desco.com',
     category: 'sports',
-    desc: "Real sh** here, This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely",
+    desc: "Real sh** here, This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
     github: 'https://github/Phenoo/alba-sports',
     photo: Item1,
+    tools: ["react","firebase", "charts"]
+
   },
   {
     id: '02',
@@ -34,6 +37,7 @@ const data = [
     desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them. Aesthestically pleasing and good graphics. View!',
     github: 'https://github/Phenoo/Food-App',
     photo: Item2,
+    tools: ["react","styled-components"]
   },
   {
     id: '03',
@@ -43,6 +47,7 @@ const data = [
     desc: ' if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. It"s fully functional, Read your quran here, Allah Akbar',
     github: 'https://github/Phenoo/quran-demo-app',
     photo: Item3,
+    tools: ["react","styled-components", "API"]
   },
   {
     id:' 04',
@@ -52,6 +57,7 @@ const data = [
     desc: 'This is a website where you can get services of lawyers and even get free consultation. No one can intimidate and go scot-free as far this exists.',
     github: 'https://github/Phenoo/Lawfirm',
     photo: Item9,
+    tools: ["react","sass"]
   },
   {
     id: '05',
@@ -61,6 +67,7 @@ const data = [
     desc: 'Real sh** here, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. Allah Akbar',
     github: 'https://github/Phenoo/Refugeeaidgroup',
     photo: Item4,
+    tools: ["HTML", "SASS", "Javascript"]
   },
   {
     id: '06',
@@ -70,6 +77,7 @@ const data = [
     desc: 'This is a demo website for a interior decors agency named "Heling". You can see the designs. You can also serve as their portfolio. ',
     github: 'https://github.com/Phenoo/Heling',
     photo: Item5,
+    tools: ["HTML", "CSS", "Javascript"]
   },
   {
     id:' 07',
@@ -79,6 +87,8 @@ const data = [
     desc: 'This is a demo website for a company that offers online courses. It was made with HTML, CSS, and JavaScript ',
     github: 'https://github.com/Phenoo/edd-courses',
     photo: Item6,
+    tools: ["HTML", "CSS", "Javascript"]
+
   },
   {
     id: '08',
@@ -88,22 +98,27 @@ const data = [
     desc: 'This is a fashion brand named Ahaz. ',
     github: 'https://github.com/Phenoo/Ahazz',
     photo: Item7,
+    tools: ["HTML", "CSS", "Javascript"]
   },
   {
     id: '09',
     url: "https://setra-resturant.vercel.app/",
     name: 'setra resturant',
+    category: 'food',
     desc: 'This is for a resturant where customers can go and know more about them and their services',
     github: 'https://github.com/Phenoo/setra-resturant',
     photo: Item8,
+    tools: ["HTML", "CSS", "Javascript"]
   },
   {
     id: '10',
+    category: 'news',
     url: "https://desgossip.netlify.app/",
     name: 'DesGossip',
     desc: 'This is a news outlet where you can browse about current news happening around the world. Note the version only request 10 requests per day so do not be suprised when it blanks.',
     github: 'https://github.com/Phenoo/DesGossip',
     photo: Item10,
+    tools: ["react", "sass", "API"]
   },
 ]
 
@@ -119,20 +134,29 @@ const Work = () => {
         <div className="work-section">
           {
             data.map((item, index) => {
-              const {name, desc, photo, url, github, id} = item
+              const {name, desc, photo, url, category, github, id, tools} = item
               return (
-                <a href={url} className="works" key={index}>
+                <motion.div href={url} className="works" key={index} initial={{opacity: 0}}
+                whileInView={{opacity: 1}} >
                   <div className="work-item">
                     <h2>
                       {id}`
                     </h2>
                     <h1>
-                      {name}
+                      {name} <span> {category}</span>
                     </h1>
                     <p>{desc}</p>
                   </div>
+                  <div className="tools">
+                    <h6>technologies</h6>
+                            {tools?.map(tool => {
+                              return <p className='tool-item'>#{tool}</p>
+                            })}
+                          </div>   
                   <div className="work-item">
-                    <img src={photo} alt="work" />
+                    <a href={url}>
+                      <img src={photo} alt="work" />
+                    </a>
                     <div className="direct-links">
                     <a href={`${github}`}>
                         <AiOutlineGithub />
@@ -142,12 +166,14 @@ const Work = () => {
                       </a>
                     </div>
                   </div>
-                </a>
+                </motion.div>
               )
             })
           }
         </div>
-        <p className="foot">Some of my works are templates from 'uihut.com', dribble.com and awwkwards</p>
+        <p className="foot">
+          <BsInfoCircle />
+          Some of my works are templates from 'uihut.com', dribble.com and awwkwards</p>
       </div>
     </section>
   )

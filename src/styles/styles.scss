@@ -11,6 +11,7 @@ h6 {
 }
 
 h4 {
+    font-family: "Roboto";
     text-transform: capitalize;
 }
 
@@ -25,7 +26,7 @@ button {
 }
 
 a {
-    font-family: "Source Sans Pro";
+    font-family: "Abel";
     cursor: pointer;
     color: inherit;
     &:hover {
@@ -38,10 +39,55 @@ img {
     height: 100%;
 }
 
+.loader-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    z-index: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+    .yingyang {
+        margin-right: 1rem;
+        svg {
+            color: $red-color;
+        }
+    }
+}
+
+.nav-active {
+    background: linear-gradient(90deg, #f53b3b, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home {
+    .yingyang {
+        svg {
+            color: $red-color;
+        }
+    }
+}
+
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 70vh;
 }
 
 button {
@@ -58,17 +104,24 @@ button {
 }
 
 .text {
-    font-family: $jost;
+    font-family: "Roboto";
     text-transform: uppercase;
-    text-align: right;
+    text-align: center;
     h1 {
-        font-size: 2.5rem;
+        font-family: "Roboto";
+        font-size: 3rem;
     }
     h4 {
-        font-size: 1.5rem;
+        font-family: "Roboto";
+        font-size: 2rem;
+        text-transform: uppercase;
     }
     h6 {
+        font-family: "Roboto";
         font-size: 1rem;
+        background: linear-gradient(90deg, #008000, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     img {
         width: 50px;
@@ -103,6 +156,9 @@ button {
     text-transform: capitalize;
     margin-top: 1rem;
     cursor: pointer;
+    p {
+        color: $text-color;
+    }
 }
 
 .projects-container {
@@ -168,6 +224,7 @@ button {
     display: flex;
     align-items: center;
     background: $bg-color;
+    padding: 0.5rem;
     color: $text-color;
     text-transform: capitalize;
     font-size: 0.7rem;
@@ -190,6 +247,7 @@ button {
     svg {
         color: $bg-color;
         font-size: 3rem;
+        opacity: 0.5;
         animation: cycle infinite 1.5s linear;
     }
 }
@@ -289,6 +347,11 @@ button {
             color: $red-color;
         }
     }
+    .right {
+        h6 {
+            text-align: right;
+        }
+    }
 }
 
 .foot-one {
@@ -386,7 +449,12 @@ button {
         text-align: right;
     }
     .foot {
-        margin-top: 2rem;
+        margin-top: 3rem;
+        text-align: center;
+        svg {
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
     }
 }
 
@@ -417,6 +485,22 @@ button {
             }
             p {
                 margin: 0.7rem 0;
+            }
+            span {
+                color: #808080;
+                font-size: 0.5rem;
+            }
+        }
+        .tools {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            h6 {
+                text-transform: capitalize;
+            }
+            p {
+                background: #808080;
+                cursor: not-allowed;
             }
         }
         img {
@@ -590,10 +674,10 @@ button {
 @media (max-width: 31em) {
     .text {
         h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
         h4 {
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
     }
     .detail-container {
@@ -601,6 +685,11 @@ button {
     }
     .projects h4 {
         font-size: 1rem;
+    }
+    .circle {
+        p {
+            font-size: 0.5rem;
+        }
     }
     .collab-container {
         .circle {
@@ -610,6 +699,18 @@ button {
     .collab {
         h4 {
             font-size: 1.25rem;
+        }
+    }
+    .work-section {
+        .works {
+            .direct-links {
+                left: 40%;
+                a {
+                    svg {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
         }
     }
     footer {
@@ -629,30 +730,20 @@ button {
         .about-yingyang {
             svg {
                 font-size: 2.5rem;
+                opacity: 0.7;
             }
         }
     }
 }
 
-.twist {
-    .nav-sti {
-        position: absolute;
-        top: 15px;
-        transform: rotate(120deg);
-        transition: $transition;
-    }
-    .nav-stick {
-        bottom: 0;
-        transform: rotate(240deg);
-    }
-}
-
 @media (max-width: 22em) {
+    .text {
+        h4 {
+            font-size: 1rem;
+        }
+    }
     .circle {
         width: 50px;
-        p {
-            font-size: 0.4rem;
-        }
     }
     .collab-container {
         .circle {

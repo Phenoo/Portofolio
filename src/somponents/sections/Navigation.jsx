@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import {AiFillLinkedin, AiOutlineGithub} from 'react-icons/ai'
-import { FaTwitter, FaMedium, FaWhatsapp} from 'react-icons/fa'
+import { FaTwitter, FaMedium, FaWhatsapp, FaBars, FaTimes} from 'react-icons/fa'
 
 import Item1 from '../../assets/images/20086735.png'
 import Item2 from '../../assets/images/quality content.webp'
@@ -25,7 +25,7 @@ h4{
   justify-content: center;
   gap: 0.4rem;
   font-family: "Poppins";
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   z-index: 100;
 }
@@ -37,39 +37,33 @@ h4{
 }
 
 .nav-icon{
-  width: 15px;
+  margin-top: 7px;
+  width: 20px;
 }
 
 .active{
   color: #f53b3b;
 }
 
-.span{
+button{
   @media(max-width: 57em){
+    position:fixed;
+    right: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    background: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(12px);
+    
     z-index: 100;
 
-    div{
-      width: 25px;
-      height: 2px;
-      position: relative;
-      background: #ddd;
-      transition: all 300ms ease;
+    svg{
+      color: #ddd;
+      font-size: 1.3rem;
     }
-    .nav-stick{
-      position: absolute;
-      bottom: ${props => props.click ? '0' : '10px'};
-    }
-}
-
-@media(max-width: 30em){
-  h4{
-    font-size: 0.7rem;
   }
 }
+
+
+
 
 
 `
@@ -115,7 +109,12 @@ const MenuList = styled.div`
     height: 50px;
     position: absolute;
     bottom: 20px;
-    right: 100px;
+    right: 80px;
+    @media(max-width: 25em){
+      width: 30px;
+      height: 30px;
+    }
+
   }
 }
 
@@ -157,11 +156,14 @@ const Navigation = () => {
   const handleClick = () => {
     setClick(!click);
   }
+
+
+
   return (
     <section>
       <Container>
         <Link to='/'>
-          <h4 onClick={() => setCurrent(1)} className={current === 1 ? 'active' : ''}>
+          <h4 onClick={() => setCurrent(1)} className={current === 1 ? 'nav-active' : 'nav-active'}>
             <span>
               <img src={Item2} alt="nav" className="nav-icon" />
             </span>
@@ -223,11 +225,9 @@ const Navigation = () => {
         <img src={Item1} alt="rah" id="icon" />
 
         </MenuList>
-        <span onClick={handleClick} className={`span ${click ? 'twist' : ''}`} click={click}> 
-            <div click={click} className='nav-sti'></div>
-            <div click={click} className='nav-stick'></div>
-        {/* } */}
-        </span>
+        <button onClick={handleClick} className={`span`}> 
+          {click ? <FaTimes /> : <FaBars />}
+        </button>
 
       </Container>
     </section>

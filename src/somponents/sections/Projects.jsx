@@ -11,6 +11,7 @@ import {FaYinYang} from 'react-icons/fa'
 
 import { Link } from 'react-router-dom'
 
+import {motion} from 'framer-motion'
 
 const data = [
   {
@@ -21,7 +22,7 @@ const data = [
     desc: "This is website of a club called 'Desco.com'', it is authenticated with firebase where interested people can sign up and join",
     github: 'https://github.com/Phenoo/alba-sports',
     photo: Item1,
-    tools: ["react","firebase"]
+    tools: ["react","firebase", "charts"]
   },
   {
     id: 2,
@@ -31,7 +32,7 @@ const data = [
     desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them.',
     github: 'https://github.com/Phenoo/Food-App',
     photo: Item2,
-    tools: ["react", "styled-components", "charts"]
+    tools: ["react", "styled-components"]
   },
   {
     id: 3,
@@ -91,7 +92,9 @@ const Projects = () => {
               data.map((item, index) => {
                 const {name, url, desc, github, photo, category, tools } = item;
                 return (
-                    <div href={url} className="project-box" key={index}> 
+                    <motion.div href={url} className="project-box" key={index} 
+                      initial={{opacity: 0}}
+                      whileInView={{opacity: 1}}> 
                       <div>
                           <img src={photo} alt="albasports" />
                         </div>
@@ -114,7 +117,7 @@ const Projects = () => {
                             <BsFillArrowUpRightSquareFill />
                           </a>
                         </div>
-                    </div>
+                    </motion.div>
                 )
               })
             }

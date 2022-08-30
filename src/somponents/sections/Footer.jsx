@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="foot-two">
-          <div className="foot-item">
+          <div className="foot-item right">
             <h6>
               socials
             </h6>

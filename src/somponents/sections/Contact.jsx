@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {FaArrowLeft} from 'react-icons/fa'
 import Item1 from '../../assets/images/we need to talk.webp'
 
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai'
 import {GoLocation} from 'react-icons/go'
 
+import emailjs from '@emailjs/browser'
+
+
 const Contact = () => {
+  const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    emailjs.sendForm(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_USER_ID)
+        .then(result => console.log(result.text),
+        error => console.log(error.text)
+        );
+
+        e.target.reset();
   }
   return (
     <section className="collab-container">
@@ -53,36 +68,30 @@ const Contact = () => {
           </div>
         </div>
         <section className="contact-form">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} ref={form}>
             <div className="form-input">
               <label>
                 What's your name?
               </label>
-              <input type="text" placeholder="john doe" />
+              <input type="text" placeholder="john doe" name="user_name" required />
             </div>
             <div className="form-input">
               <label>
                 What's your email?
               </label>
-              <input type="email" placeholder="john@doe.com" />
+              <input type="email" placeholder="john@doe.com" name="user_email" required />
             </div>
             <div className="form-input">
               <label>
                 What's your name of your organization
               </label>
-              <input type="text" placeholder="john doe plc" />
-            </div>
-            <div className="form-input">
-              <label>
-                What's services are you looking for?
-              </label>
-              <input type="text" placeholder="john doe" />
+              <input type="text" placeholder="john doe plc" name="user_phone" required />
             </div>
             <div className="form-input">
               <label>
                 Your message
               </label>
-              <textarea name="" id="textarea" cols="50" rows="10" placeholder="Hello Desco, can you work on this?"></textarea>
+              <textarea name="message" id="textarea" cols="50" rows="10" placeholder="Hello Desco, can you work on this?" required></textarea>
             </div>
             <button type="submit" className="circle" >
               <p>send it</p>

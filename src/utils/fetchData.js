@@ -1,23 +1,48 @@
-export const exerciseOptions = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-    },
-}
+export const useAnimations = () => {
+    const transition = {
+        duration: 1,
+        ease: [0.6, -0.05, 0.01, 0.9],
+    };
 
-export const youTubeOptions = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com',
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
-    },
-}
+    const textReveal = {
+        bananin: {
+            y: '200%',
+            opacity: 0
+        },
+        bananon: {
+            y: '0%',
+            opacity: 1
+        }
+    }
+    const ImgReveal = {
+        bananin: {
+            x: '200%',
+            opacity: 0
+        },
+        bananon: {
+            x: '0%',
+            opacity: 1
+        }
+    }
+    const container = {
+        hidden: {
+            opacity: 1,
+            scale: 0
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    }
 
 
-export const fetchData = async(url, options) => {
-    const response = await fetch(url, options);
-    const data = await response.json();
-
-    return data;
+    const cata = {
+        hidden: { y: 20, opacity: 0 },
+        visible: { y: 0, opacity: 1 }
+    }
+    return { transition, textReveal, ImgReveal, container, cata };
 }

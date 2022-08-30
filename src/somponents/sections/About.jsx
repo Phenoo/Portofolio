@@ -11,7 +11,7 @@ const About = () => {
     <section className='about-section'>
       <img src={Item1} alt="bg" className="icon"/>
       <div className="about-container">
-        <p>My name is Paschal Eze AKA Desco4PF. I am afrontend developer currently based in Enugu, Nigeria. I am student of Computer Science
+        <p>My name is Paschal Eze AKA 'Desco4PF'. I am afrontend developer currently based in Enugu, Nigeria. I am student of Computer Science
           at University of Nigeria, Nsukka. I love solving problems through
           simplifying the complexity and combining insightful research with intuitive design
           I build scalable websites from scartch that fit seamlessy with design. 
