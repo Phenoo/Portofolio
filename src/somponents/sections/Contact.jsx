@@ -83,9 +83,9 @@ const Contact = () => {
             </div>
             <div className="form-input">
               <label>
-                What's your name of your organization
+                What's your phone number <span>(Whatsapp / Telegram)</span>
               </label>
-              <input type="text" placeholder="john doe plc" name="user_phone" required />
+              <input type="text" placeholder="+234 901 970 3944" name="user_phone" required />
             </div>
             <div className="form-input">
               <label>

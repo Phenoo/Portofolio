@@ -3,6 +3,7 @@ $jost: "Jost";
 $red-color: #f53b3b;
 $text-color: #ddd;
 $bg-color: #111111;
+$grey-color: #808080;
 $transition: 300ms ease;
 p,
 h4,
@@ -197,7 +198,7 @@ button {
     span {
         text-transform: lowercase;
         font-size: 0.7rem;
-        color: #808080;
+        color: $grey-color;
     }
     .svg {
         display: flex;
@@ -493,7 +494,7 @@ button {
                 margin: 0.7rem 0;
             }
             span {
-                color: #808080;
+                color: $grey-color;
                 font-size: 0.5rem;
             }
         }
@@ -505,7 +506,7 @@ button {
                 text-transform: capitalize;
             }
             p {
-                background: #808080;
+                background: $grey-color;
                 cursor: not-allowed;
             }
         }
@@ -552,7 +553,7 @@ button {
         font-size: 0.9rem;
     }
     h6 {
-        color: #808080;
+        color: $grey-color;
         text-transform: capitalize;
     }
     div {
@@ -570,9 +571,12 @@ button {
     }
     .form-input {
         border-bottom: 1px solid $text-color;
-        // border-top: 1px solid #ddd;
         padding: 1rem 0;
         margin: 1rem 0;
+        span {
+            font-size: 0.8rem;
+            color: $grey-color;
+        }
     }
     label {
         display: block;
@@ -585,10 +589,10 @@ button {
         background: none;
         border: none;
         outline: none;
-        color: #808080;
+        color: $grey-color;
         font-size: 1rem;
         &::placeholder {
-            color: #808080;
+            color: $grey-color;
             font-size: 0.7rem;
             text-transform: capitalize;
             font-family: "Poppins";
