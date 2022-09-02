@@ -23,7 +23,7 @@ const data = [
     url: "https://alba-sports.vercel.app/",
     name: 'desco.com',
     category: 'sports',
-    desc: "Real sh** here, This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
+    desc: "Real deal here, This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
     github: 'https://github/Phenoo/alba-sports',
     photo: Item1,
     tools: ["react","firebase", "charts"]
