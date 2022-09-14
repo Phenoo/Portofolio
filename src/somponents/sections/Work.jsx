@@ -64,7 +64,7 @@ const data = [
     url: "https://refugeeaidg.netlify.app/",
     name: 'refugee aid group',
     category: 'charity',
-    desc: 'Real sh** here, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. Allah Akbar',
+    desc: 'This is for charity organization where you can receive newsa bout refugees, help refugees and donate to them',
     github: 'https://github/Phenoo/Refugeeaidgroup',
     photo: Item4,
     tools: ["HTML", "SASS", "Javascript"]

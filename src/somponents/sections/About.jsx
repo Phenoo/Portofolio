@@ -29,7 +29,7 @@ const About = () => {
         </p>
         <div className="tools-container">
           <h4>
-            technologies I'm good in
+            technologies I'm good at
           </h4>
           <div className="tools">
             <div className="item html">

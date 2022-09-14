@@ -39,7 +39,7 @@ const data = [
     url: "https://readquranapp.netlify.app/",
     name: 'Quran-app',
     category: 'religion',
-    desc: 'Real sh** here, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. Allah Akbar',
+    desc: 'Alhamduliah, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. You will discover alot about Quran with this web-app',
     github: 'https://github.com/Phenoo/quran-demo-app',
     photo: Item3,
     tools: ["react", "API", "styled-components"]
@@ -50,7 +50,7 @@ const data = [
     url: "https://refugeeaidg.netlify.app/",
     name: 'refugee aid group',
     category: 'charity',
-    desc: 'Real sh** here, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. Allah Akbar',
+    desc: 'This is for charity organization where you can receive newsa bout refugees, help refugees and donate to them',
     github: 'https://github.com/Phenoo/Refugeeaidgroup',
     photo: Item4,
     tools: ["HTML", "CSS", "Javascript"]
