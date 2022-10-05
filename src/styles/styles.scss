@@ -81,6 +81,7 @@ img {
 }
 
 .home {
+    margin-top: 2rem;
     .yingyang {
         bottom: 20px;
         svg {
@@ -94,7 +95,17 @@ img {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    height: 90vh;
+}
+
+.cage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BgAnimation__svg {
+    width: 80vw;
+    height: 400px;
 }
 
 button {
@@ -146,7 +157,7 @@ button {
 .footer {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     text-transform: capitalize;
     margin-top: 2rem;
 }
@@ -234,7 +245,7 @@ button {
     padding: 0.5rem;
     color: $text-color;
     text-transform: capitalize;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
     border-radius: 5px;
     transition: $transition;
@@ -623,6 +634,9 @@ button {
             height: 200px;
         }
     }
+    .detail-container {
+        flex-direction: column;
+    }
     .text {
         text-align: center;
     }
@@ -690,9 +704,6 @@ button {
 }
 
 @media (max-width: 31em) {
-    .container {
-        height: 68vh;
-    }
     .text {
         h1 {
             font-size: 1.5rem;
@@ -703,6 +714,9 @@ button {
         }
     }
     .detail-container {
+        flex-direction: column;
+    }
+    .cage {
         flex-direction: column;
     }
     .projects h4 {

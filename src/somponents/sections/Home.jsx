@@ -3,6 +3,7 @@ import { FaYinYang } from 'react-icons/fa'
 import Item1 from '../../assets/images/haiii.webp'
 import {motion} from 'framer-motion'
 import {useAnimations} from '../../utils/fetchData'
+import BackgroundAnimation from './BackgroundAnimation'
 
 const Home = () => {
   const { transition, textReveal, ImgReveal } = useAnimations();
@@ -42,6 +43,10 @@ const Home = () => {
             from nigeria
           </motion.h6>
         </div>
+      </div>
+      <div className="cage">
+      <BackgroundAnimation />
+      {/* <BackgroundAnimation /> */}
       </div>
       <div className="yingyang">
         <FaYinYang />

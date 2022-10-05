@@ -25,9 +25,12 @@ h4{
   justify-content: center;
   gap: 0.4rem;
   font-family: "Poppins";
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   z-index: 100;
+  @media(max-width: 31em){
+    font-size: 1.25rem;
+  }
 }
 
 #home{
@@ -75,6 +78,9 @@ const MenuList = styled.div`
   display: none;
 }
 
+li{
+  font-size: 1.5rem;
+}
 @media(max-width: 57em){
   display: flex;
   position: fixed; 
