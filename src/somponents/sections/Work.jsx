@@ -62,7 +62,7 @@ const data = [
   },
   {
     id:' 05',
-    url: "https:://justicehere.netlify.app/",
+    url: "https://justicehere.netlify.app/",
     name: 'justice',
     category: 'law & judiciary',
     desc: 'This is a website where you can get services of lawyers and even get free consultation. No one can intimidate and go scot-free as far this exists.',

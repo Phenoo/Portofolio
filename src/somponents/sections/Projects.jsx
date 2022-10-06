@@ -47,7 +47,7 @@ const data = [
   },
   {
     id:' 04',
-    url: "https:://lampnet-trial.app/",
+    url: "https://lampnet-trial.app/",
     name: 'Lampnet solution trial',
     category: 'Trial project',
     desc: 'This was my trial project at Lampnet solutions for their internship program.',
