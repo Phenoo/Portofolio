@@ -73,7 +73,7 @@ const About = () => {
           </div>
         </div>
         <div className="resume">
-          <a href="../../assets/orig-ezeresume.pdf" download='descoresume'>
+          <a href="../../assets/Desco.pdf" download='descoresume'>
             get resume
           </a>
         </div>

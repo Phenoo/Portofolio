@@ -3,7 +3,7 @@ import Item1 from '../../assets/images/alba.png'
 import Item2 from '../../assets/images/food.png' 
 import Item3 from '../../assets/images/quran.png'
 import Item4 from '../../assets/images/refugee.png'
-import Item5 from '../../assets/images/heling.png'
+import Item5 from '../../assets/images/trial.png'
 import Item6 from '../../assets/images/painting.webp'
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
@@ -46,7 +46,17 @@ const data = [
 
   },
   {
-    id: 4,
+    id:' 04',
+    url: "https:://lampnet-trial.app/",
+    name: 'Lampnet solution trial',
+    category: 'Trial project',
+    desc: 'This was my trial project at Lampnet solutions for their internship program.',
+    github: 'https://github/Phenoo/Lampnet-trial',
+    photo: Item5,
+    tools: ["react","sass"]
+  },
+  {
+    id: 5,
     url: "https://refugeeaidg.netlify.app/",
     name: 'refugee aid group',
     category: 'charity',
@@ -56,18 +66,7 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
 
   },
-  {
-    id: 5,
-    url: "https://heling.netlify.app/",
-    name: 'heling',
-    category: 'decors',
-    desc: 'This is a demo website for a interior decors agency named "Heling". You can see the designs. You can also serve as their portfolio. ',
-    github: 'https://github.com/Phenoo/Heling',
-    photo: Item5,
-    tools: ["HTML", "CSS", "Javascript"]
-    
 
-  },
 ]
 
 const Projects = () => {

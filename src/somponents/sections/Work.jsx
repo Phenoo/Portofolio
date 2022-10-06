@@ -10,6 +10,7 @@ import Item7 from '../../assets/images/ahaz.png'
 import Item8 from '../../assets/images/setra.png'
 import Item9 from '../../assets/images/justice.png'
 import Item10 from '../../assets/images/gossip.png'
+import Trial from '../../assets/images/trial.png'
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
 import {BsInfoCircle} from 'react-icons/bs'
@@ -51,6 +52,16 @@ const data = [
   },
   {
     id:' 04',
+    url: "https:://lampnet-trial.app/",
+    name: 'Lampnet solution trial',
+    category: 'Trial project',
+    desc: 'This was my trial project at Lampnet solutions for their internship program.',
+    github: 'https://github/Phenoo/Lawfirm',
+    photo: Trial,
+    tools: ["react","sass"]
+  },
+  {
+    id:' 05',
     url: "https:://justicehere.netlify.app/",
     name: 'justice',
     category: 'law & judiciary',
@@ -60,7 +71,7 @@ const data = [
     tools: ["react","sass"]
   },
   {
-    id: '05',
+    id: '06',
     url: "https://refugeeaidg.netlify.app/",
     name: 'refugee aid group',
     category: 'charity',
@@ -70,7 +81,7 @@ const data = [
     tools: ["HTML", "SASS", "Javascript"]
   },
   {
-    id: '06',
+    id: '07',
     url: "https://heling.netlify.app/",
     name: 'heling',
     category: 'decors',
@@ -80,8 +91,8 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id:' 07',
-    url: "https://heling.netlify.app/",
+    id:' 08',
+    url: "https://edd-courses.vercel.app",
     name: 'edd courses',
     category: 'education',
     desc: 'This is a demo website for a company that offers online courses. It was made with HTML, CSS, and JavaScript ',
@@ -91,7 +102,7 @@ const data = [
 
   },
   {
-    id: '08',
+    id: '09',
     url: "https://ahaz.vercel.app/",
     name: 'Ahaz',
     category: 'fashion',
@@ -101,7 +112,7 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id: '09',
+    id: '10',
     url: "https://setra-resturant.vercel.app/",
     name: 'setra resturant',
     category: 'food',
@@ -111,7 +122,7 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id: '10',
+    id: '11',
     category: 'news',
     url: "https://desgossip.netlify.app/",
     name: 'DesGossip',
