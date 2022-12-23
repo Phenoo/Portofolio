@@ -24,7 +24,7 @@ const Home = () => {
             initial='bananin'
             animate='bananon'
             transition={{...transition, delay: 0.3}}
-          >paschal eze
+          > eze paschal
           </motion.h1>
           <motion.h4
             variants={textReveal}

@@ -10,6 +10,9 @@ import Item7 from '../../assets/images/ahaz.png'
 import Item8 from '../../assets/images/setra.png'
 import Item9 from '../../assets/images/justice.png'
 import Item10 from '../../assets/images/gossip.png'
+import Item12 from '../../assets/images/desco.png'
+import Item13 from '../../assets/images/flower.png'
+import Item14 from '../../assets/images/ozoude.png'
 import Trial from '../../assets/images/trial.png'
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
@@ -20,7 +23,15 @@ import {motion} from 'framer-motion'
 
 const data = [
   {
-    id: '01',
+    url: "https://descoart.vercel.app/",
+    name: 'godson art',
+    category: 'arts',
+    desc: "This is an artist/painter portfolio where he shows his works and sell them too. I use sanity for the content management.",
+    github: 'https://github/Phenoo/artist',
+    photo: Item12,
+    tools: ["react", "sanity", "paypal"]
+  },
+  {
     url: "https://alba-sports.vercel.app/",
     name: 'desco.com',
     category: 'sports',
@@ -28,10 +39,8 @@ const data = [
     github: 'https://github/Phenoo/alba-sports',
     photo: Item1,
     tools: ["react","firebase", "charts"]
-
   },
   {
-    id: '02',
     url: "https://saladdemo.netlify.app/",
     name: 'Salad',
     category: 'food',
@@ -41,7 +50,6 @@ const data = [
     tools: ["react","styled-components"]
   },
   {
-    id: '03',
     url: "https://readquranapp.netlify.app/",
     name: 'Quran-app',
     category: 'religion',
@@ -51,7 +59,6 @@ const data = [
     tools: ["react","styled-components", "API"]
   },
   {
-    id:' 04',
     url: "https:://lampnet-trial.vercel.app/",
     name: 'Lampnet solution trial',
     category: 'Trial project',
@@ -61,7 +68,24 @@ const data = [
     tools: ["react","sass"]
   },
   {
-    id:' 05',
+  url: "https:://flower-topaz.vercel.app/",
+  name: 'Flower Shop',
+  category: 'shop',
+  desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
+  github: 'https://github/Phenoo/Flower',
+  photo: Item13,
+  tools: ["react","sass", "sanity"]
+},
+  {
+  url: "https://solar-blue.vercel.app/",
+  name: 'Ozoude Solar',
+  category: 'shop',
+  desc: 'Owned by a solar that sells solar panels and other related products',
+  github: 'https://github/Phenoo/Solar-',
+  photo: Item14,
+  tools: ["nextjs","sass", "sanity"]
+  },
+  {
     url: "https://justicehere.netlify.app/",
     name: 'justice',
     category: 'law & judiciary',
@@ -71,7 +95,6 @@ const data = [
     tools: ["react","sass"]
   },
   {
-    id: '06',
     url: "https://refugeeaidg.netlify.app/",
     name: 'refugee aid group',
     category: 'charity',
@@ -81,7 +104,6 @@ const data = [
     tools: ["HTML", "SASS", "Javascript"]
   },
   {
-    id: '07',
     url: "https://heling.netlify.app/",
     name: 'heling',
     category: 'decors',
@@ -91,7 +113,6 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id:' 08',
     url: "https://edd-courses.vercel.app",
     name: 'edd courses',
     category: 'education',
@@ -102,7 +123,6 @@ const data = [
 
   },
   {
-    id: '09',
     url: "https://ahaz.vercel.app/",
     name: 'Ahaz',
     category: 'fashion',
@@ -112,7 +132,6 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id: '10',
     url: "https://setra-resturant.vercel.app/",
     name: 'setra resturant',
     category: 'food',
@@ -122,7 +141,6 @@ const data = [
     tools: ["HTML", "CSS", "Javascript"]
   },
   {
-    id: '11',
     category: 'news',
     url: "https://desgossip.netlify.app/",
     name: 'DesGossip',
@@ -145,13 +163,13 @@ const Work = () => {
         <div className="work-section">
           {
             data.map((item, index) => {
-              const {name, desc, photo, url, category, github, id, tools} = item
+              const {name, desc, photo, url, category, github, tools} = item
               return (
                 <motion.div href={url} className="works" key={index} initial={{opacity: 0}}
                 whileInView={{opacity: 1}} >
                   <div className="work-item">
                     <h2>
-                      {id}`
+                      0{index + 1}`
                     </h2>
                     <h1>
                       {name} <span> {category}</span>
