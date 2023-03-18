@@ -24,7 +24,7 @@ h4{
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  font-family: "Poppins";
+  font-family: "Jost";
   font-size: 1.5rem;
   text-transform: uppercase;
   z-index: 100;
@@ -49,15 +49,10 @@ h4{
 }
 
 button{
+  background: none;
   @media(max-width: 57em){
-    position:fixed;
-    right: 10px;
     display: flex;
-    background: rgba(18, 18, 18, 0.5);
-    backdrop-filter: blur(12px);
-    
-    z-index: 100;
-
+    z-index: 1000;
     svg{
       color: #ddd;
       font-size: 1.3rem;
@@ -166,7 +161,10 @@ const Navigation = () => {
 
 
   return (
+    <div className='fixed'>
+
     <section>
+
       <Container>
         <Link to='/'>
           <h4 onClick={() => setCurrent(1)} className={current === 1 ? 'nav-active' : 'nav-active'}>
@@ -237,6 +235,8 @@ const Navigation = () => {
 
       </Container>
     </section>
+    </div>
+
   )
 }
 

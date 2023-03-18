@@ -25,7 +25,7 @@ const Contact = () => {
         e.target.reset();
   }
   return (
-    <section className="collab-container">
+    <section className="collab-container contact">
     <img src={Item1} alt="collab" className="icon" />
     <div className="collab">
       <div className="collab-part">

@@ -11,23 +11,16 @@ const About = () => {
     <section className='about-section'>
       <img src={Item1} alt="bg" className="icon"/>
       <div className="about-container">
-        <p>My name is Paschal Eze AKA 'Desco4PF'. I am afrontend developer currently based in Enugu, Nigeria. I am student of Computer Science
-          at University of Nigeria, Nsukka. I love solving problems through
-          simplifying the complexity and combining insightful research with intuitive design
-          I build scalable websites from scartch that fit seamlessy with design. 
-          I have an obsession of creating aesthetically pleasing yet efficient web-apps.
-          I have two years of experience of web development and programming.
+        <h4>
+          Introduction
+        </h4>
+        <br />
+        <p>Hello and welcome to my portfolio as a frontend developer. My name is Eze Paschal, and I am a skilled frontend developer with 3 years of experience. I have worked on a variety of projects, ranging from small websites to large web applications. In this portfolio, I will showcase my skills, experience, and projects that I have worked on.
           I look to learn other programming languages and stacks as the journey continues. I have worked with small-scale business where i gathered
-          experience in sales and marketing. Fully in support in the idea of working remotely. I can also work with any time-zone
-                    <br />
-          <br />
-          <br />
-          <br />
-          I am also a big fan of Blockchain and Data Science. I watch football and combat sports when I am not coding. I have massive love for music,
-          i listen to all types of music but highlife and hip-hop
-          tops the list. I am good writer, you can check my few medium posts.
+          experience in sales and marketing. Fully in support in the idea of working remotely. I can also work with any time-zone 
         </p>
-        <div className="tools-container">
+
+          <div className="tools-container">
           <h4>
             technologies I'm good at
           </h4>
@@ -72,9 +65,17 @@ const About = () => {
             </div>
           </div>
         </div>
+          <br />
+        <br />
+          <h4>
+            Conclusion
+          </h4>
+        <p>
+        As a frontend developer, I am passionate about creating intuitive and engaging user interfaces. I have the technical skills, experience, and creativity to create effective and efficient user experiences. If you are looking for a frontend developer for your next project, please don't hesitate to <span><a href="mailto:descometusah@gmail.com">contact me</a></span>. Thank you for taking the time to review my portfolio.
+        </p>
         <div className="resume">
-          <a href="../../assets/Desco.pdf" download='descoresume'>
-            get resume
+          <a href="../../assets/ezepaschalcv.docx" download='descoresume'>
+            download resume
           </a>
         </div>
         <div className='about-yingyang'>

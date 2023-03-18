@@ -1,10 +1,4 @@
 import React from 'react'
-import Item1 from '../../assets/images/alba.png' 
-import Item2 from '../../assets/images/food.png' 
-import Item3 from '../../assets/images/quran.png'
-import Item4 from '../../assets/images/refugee.png'
-import Item5 from '../../assets/images/trial.png'
-import Item6 from '../../assets/images/painting.webp'
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
 import {FaYinYang} from 'react-icons/fa'
@@ -13,58 +7,69 @@ import { Link } from 'react-router-dom'
 
 import {motion} from 'framer-motion'
 
+
+import Img1 from '../../assets/images/painting.webp'
+import Item1 from '../../assets/images/alba.webp' 
+import Item2 from '../../assets/images/food.webp' 
+import Item12 from '../../assets/images/godson.webp'
+import Item13 from '../../assets/images/flower.png'
+import Item14 from '../../assets/images/ozoude.png'
+import Item15 from '../../assets/images/woodwork.png'
+
 const data = [
   {
-    id: 1,
+    url: "https://woodwork-ten.vercel.app",
+    name: 'Woodwork ',
+    category: 'commerce',
+    desc: "An online retailer that specializes in selling furntiure. It typically displays a wide range of interior products organized into categories for easy navigation.",
+    github: 'https://github/Phenoo/Woodwork',
+    photo: Item15,
+    tools: ["nextjs", "tailwind css", "sanity"]
+  },
+  {
+    url: "https://descoart.vercel.app/",
+    name: 'godson art',
+    category: 'arts',
+    desc: "This is an artist/painter portfolio where he shows his works and sell them too. I use sanity for the content management.",
+    github: 'https://github/Phenoo/artist',
+    photo: Item12,
+    tools: ["react", "sanity", "paypal"]
+  },
+  {
+    url: "https:://flower-topaz.vercel.app/",
+    name: 'Flower Shop',
+    category: 'shop',
+    desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
+    github: 'https://github/Phenoo/Flower',
+    photo: Item13,
+    tools: ["react","sass", "sanity"]
+  },
+    {
+    url: "https://solar-blue.vercel.app/",
+    name: 'Ozoude Solar',
+    category: 'shop',
+    desc: 'Owned by a solar company that sells solar panels and other related products',
+    github: 'https://github/Phenoo/Solar-',
+    photo: Item14,
+    tools: ["nextjs","sass", "sanity"]
+    },
+  {
     url: "https://alba-sports.vercel.app/",
     name: 'desco.com',
     category: 'sports',
-    desc: "This is website of a club called 'Desco.com'', it is authenticated with firebase where interested people can sign up and join",
-    github: 'https://github.com/Phenoo/alba-sports',
+    desc: "This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
+    github: 'https://github/Phenoo/alba-sports',
     photo: Item1,
     tools: ["react","firebase", "charts"]
   },
   {
-    id: 2,
     url: "https://saladdemo.netlify.app/",
     name: 'Salad',
     category: 'food',
-    desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them.',
-    github: 'https://github.com/Phenoo/Food-App',
+    desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them. Aesthestically pleasing and good graphics. View!',
+    github: 'https://github/Phenoo/Food-App',
     photo: Item2,
-    tools: ["react", "styled-components"]
-  },
-  {
-    id: 3,
-    url: "https://readquranapp.netlify.app/",
-    name: 'Quran-app',
-    category: 'religion',
-    desc: 'Alhamduliah, if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. You will discover alot about Quran with this web-app',
-    github: 'https://github.com/Phenoo/quran-demo-app',
-    photo: Item3,
-    tools: ["react", "API", "styled-components"]
-
-  },
-  {
-    id:' 04',
-    url: "https://lampnet-trial.vercel.app/",
-    name: 'Lampnet solution trial',
-    category: 'Trial project',
-    desc: 'This was my trial project at Lampnet solutions for their internship program.',
-    github: 'https://github/Phenoo/Lampnet-trial',
-    photo: Item5,
-    tools: ["react","sass"]
-  },
-  {
-    id: 5,
-    url: "https://refugeeaidg.netlify.app/",
-    name: 'refugee aid group',
-    category: 'charity',
-    desc: 'This is for charity organization where you can receive newsa bout refugees, help refugees and donate to them',
-    github: 'https://github.com/Phenoo/Refugeeaidgroup',
-    photo: Item4,
-    tools: ["HTML", "CSS", "Javascript"]
-
+    tools: ["react","styled-components"]
   },
 
 ]
@@ -75,7 +80,7 @@ const Projects = () => {
       <section>
         <div className="desc">
           <div>
-            <img src={Item6} alt="work" className='icon' />
+            <img src={Img1} alt="work" className='icon' />
           </div>
           <div>
             <h4>

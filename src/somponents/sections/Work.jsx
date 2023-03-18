@@ -1,7 +1,7 @@
 import React from 'react'
 import Img1 from '../../assets/images/painting.webp'
-import Item1 from '../../assets/images/alba.png' 
-import Item2 from '../../assets/images/food.png' 
+import Item1 from '../../assets/images/alba.webp' 
+import Item2 from '../../assets/images/food.webp' 
 import Item3 from '../../assets/images/quran.png'
 import Item4 from '../../assets/images/refugee.png'
 import Item5 from '../../assets/images/heling.png'
@@ -10,10 +10,14 @@ import Item7 from '../../assets/images/ahaz.png'
 import Item8 from '../../assets/images/setra.png'
 import Item9 from '../../assets/images/justice.png'
 import Item10 from '../../assets/images/gossip.png'
-import Item12 from '../../assets/images/desco.png'
+import Item12 from '../../assets/images/godson.webp'
 import Item13 from '../../assets/images/flower.png'
 import Item14 from '../../assets/images/ozoude.png'
 import Trial from '../../assets/images/trial.png'
+import Item15 from '../../assets/images/woodwork.png'
+import Item16 from '../../assets/images/shoes.webp'
+
+
 import {AiOutlineGithub} from 'react-icons/ai'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
 import {BsInfoCircle} from 'react-icons/bs'
@@ -23,6 +27,15 @@ import {motion} from 'framer-motion'
 
 const data = [
   {
+    url: "https://woodwork-ten.vercel.app/",
+    name: 'Woodwork ',
+    category: 'commerce',
+    desc: "A shoe e-store is an online retailer that specializes in selling furntiure. The e-store typically displays a wide range of interior products organized into categories and subcategories for easy navigation. The website is designed to provide customers with a seamless shopping experience, featuring high-quality product images, and detailed descriptions",
+    github: 'https://github/Phenoo/Woodwork',
+    photo: Item15,
+    tools: ["nextjs", "sanity", "tailwind css"]
+  },
+  {
     url: "https://descoart.vercel.app/",
     name: 'godson art',
     category: 'arts',
@@ -31,6 +44,33 @@ const data = [
     photo: Item12,
     tools: ["react", "sanity", "paypal"]
   },
+  {
+    url: "https:://flower-topaz.vercel.app/",
+    name: 'Flower Shop',
+    category: 'shop',
+    desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
+    github: 'https://github/Phenoo/Flower',
+    photo: Item13,
+    tools: ["react","sass", "sanity"]
+  },
+  {
+    url: "https://descoshoes.vercel.app/",
+    name: 'Desco Shoes ',
+    category: 'commerce',
+    desc: "An online retailer that specializes in selling sneakers of different brands.",
+    github: 'https://github/Phenoo/Woodwork',
+    photo: Item16,
+    tools: ["nextjs", "css", "sanity"]
+  },
+    {
+    url: "https://solar-blue.vercel.app/",
+    name: 'Ozoude Solar',
+    category: 'shop',
+    desc: 'Owned by a solar that sells solar panels and other related products',
+    github: 'https://github/Phenoo/Solar-',
+    photo: Item14,
+    tools: ["nextjs","sass", "sanity"]
+    },
   {
     url: "https://alba-sports.vercel.app/",
     name: 'desco.com',
@@ -66,24 +106,6 @@ const data = [
     github: 'https://github/Phenoo/Lawfirm',
     photo: Trial,
     tools: ["react","sass"]
-  },
-  {
-  url: "https:://flower-topaz.vercel.app/",
-  name: 'Flower Shop',
-  category: 'shop',
-  desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
-  github: 'https://github/Phenoo/Flower',
-  photo: Item13,
-  tools: ["react","sass", "sanity"]
-},
-  {
-  url: "https://solar-blue.vercel.app/",
-  name: 'Ozoude Solar',
-  category: 'shop',
-  desc: 'Owned by a solar that sells solar panels and other related products',
-  github: 'https://github/Phenoo/Solar-',
-  photo: Item14,
-  tools: ["nextjs","sass", "sanity"]
   },
   {
     url: "https://justicehere.netlify.app/",
@@ -153,7 +175,7 @@ const data = [
 
 const Work = () => {
   return (
-    <section>
+    <section className='work'>
       <img src={Img1} alt="work"  className="icon"/>
       <div className="work-container">
         <h4>
@@ -200,6 +222,8 @@ const Work = () => {
             })
           }
         </div>
+        <br />
+        <br />
         <p className="foot">
           <BsInfoCircle />
           Some of my works are templates from 'uihut.com', dribble.com and awwkwards</p>

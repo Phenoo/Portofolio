@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Silkscreen&family=Arima&family=Jost&family=Roboto&family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Silkscreen&family=Arima&family=Quicksand&family=Roboto&family=Montserrat&family=Work+Sans&family=Poppins&display=swap');
 $jost: "Jost";
 $red-color: #f53b3b;
 $text-color: #ddd;
@@ -8,7 +8,7 @@ $transition: 300ms ease;
 p,
 h4,
 h6 {
-    font-family: $jost;
+    font-family: "Quicksand", sans-serif;
 }
 
 h4 {
@@ -40,6 +40,14 @@ img {
     height: 100%;
 }
 
+.fixed{
+    position: fixed;
+    top: 0;
+    background: #211e1e;
+    width: 100%;
+    z-index: 10;
+}
+
 .loader-container {
     position: fixed;
     top: 0;
@@ -59,7 +67,11 @@ img {
         gap: 1rem;
         font-family: "Silkscreen";
         text-transform: uppercase;
-        font-size: 0.8rem;
+        font-size: 1.5rem;
+        color: #ffffff;
+        @media screen and (max-width: 600px) {
+            font-size: 1rem;
+        }
     }
     .icon {
         width: 100px;
@@ -81,7 +93,7 @@ img {
 }
 
 .home {
-    margin-top: 2rem;
+    margin-top: 10vh;
     .yingyang {
         bottom: 20px;
         svg {
@@ -96,6 +108,7 @@ img {
     flex-direction: column;
     gap: 1rem;
 }
+
 
 .cage {
     display: flex;
@@ -184,11 +197,11 @@ button {
     flex-wrap: wrap;
     margin: 2rem 0;
     gap: 1rem;
-    -webkit-column-gap: 1rem;
 }
 
 .project-box {
     width: 330px;
+    height: 375px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -198,16 +211,20 @@ button {
     padding: 1rem;
     transition: $transition;
     border-radius: 10px;
+    img{
+        height: 170px;
+    }
     h6 {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
         text-transform: capitalize;
     }
     p {
         font-size: 0.7rem;
+        margin-top: 8px;
     }
     span {
         text-transform: lowercase;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         color: $grey-color;
     }
     .svg {
@@ -241,7 +258,7 @@ button {
     display: flex;
     align-items: center;
     background: $bg-color;
-    padding: 0.5rem;
+    padding: 1rem;
     color: $text-color;
     text-transform: capitalize;
     font-size: 1rem;
@@ -318,11 +335,13 @@ button {
         border: none;
     }
     .collab-link {
-        padding: 0.7rem;
+        margin: 2rem 0;
+        padding: 0.5rem;
+        font-size: 0.7rem;
         color: $text-color;
         border: 1px solid $text-color;
         border-radius: 25px;
-        margin-right: 5px;
+        margin-right: 10px;
         transition: $transition;
         &:hover {
             background: $text-color;
@@ -358,7 +377,7 @@ button {
 
 .footer {
     width: 90%;
-    margin: 1rem auto;
+    margin: 4rem auto 1rem;
     a {
         &:hover {
             color: $red-color;
@@ -379,13 +398,19 @@ button {
 //ABOUT
 .about-section {
     margin-top: 2rem;
+    margin-top: 15vh;
+
 }
 
 .about-container {
     min-height: 80vh;
+    margin-top: 2rem;
+    p{
+        line-height: 1.5rem;
+    }
+
     .about-yingyang {
         text-align: right;
-        margin-top: 3rem;
         svg {
             font-size: 5rem;
             color: $red-color;
@@ -397,7 +422,7 @@ button {
 }
 
 .tools-container {
-    margin-top: 2rem;
+    margin-top: 5rem;
     .tools {
         display: flex;
         align-items: center;
@@ -475,13 +500,19 @@ button {
         }
     }
 }
-
+.work{
+    margin-top: 15vh;
+}
 .work-section {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    p{
+        line-height: 1.5rem;
+    }
     .works {
+        margin: 1rem 0;
         cursor: pointer;
         transition: $transition;
         &:hover {
@@ -557,6 +588,9 @@ button {
 }
 
 // CONTACT
+.contact{
+    margin-top: 20vh;
+}
 .contact-details {
     margin-top: 2rem;
     text-transform: capitalize;
@@ -659,9 +693,7 @@ button {
         button {
             font-size: 0.7rem;
         }
-        .collab-link {
-            font-size: 0.5rem;
-        }
+       
     }
 }
 
