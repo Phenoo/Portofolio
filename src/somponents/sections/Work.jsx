@@ -31,7 +31,7 @@ const data = [
     name: 'Woodwork ',
     category: 'commerce',
     desc: "A shoe e-store is an online retailer that specializes in selling furntiure. The e-store typically displays a wide range of interior products organized into categories and subcategories for easy navigation. The website is designed to provide customers with a seamless shopping experience, featuring high-quality product images, and detailed descriptions",
-    github: 'https://github/Phenoo/Woodwork',
+    github: 'https://github.com/Phenoo/Woodwork',
     photo: Item15,
     tools: ["nextjs", "sanity", "tailwind css"]
   },
@@ -40,7 +40,7 @@ const data = [
     name: 'godson art',
     category: 'arts',
     desc: "This is an artist/painter portfolio where he shows his works and sell them too. I use sanity for the content management.",
-    github: 'https://github/Phenoo/artist',
+    github: 'https://github.com/Phenoo/artist',
     photo: Item12,
     tools: ["react", "sanity", "paypal"]
   },
@@ -49,7 +49,7 @@ const data = [
     name: 'Flower Shop',
     category: 'shop',
     desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
-    github: 'https://github/Phenoo/Flower',
+    github: 'https://github.com/Phenoo/Flower',
     photo: Item13,
     tools: ["react","sass", "sanity"]
   },
@@ -58,7 +58,7 @@ const data = [
     name: 'Desco Shoes ',
     category: 'commerce',
     desc: "An online retailer that specializes in selling sneakers of different brands.",
-    github: 'https://github/Phenoo/Woodwork',
+    github: 'https://github.com/Phenoo/Woodwork',
     photo: Item16,
     tools: ["nextjs", "css", "sanity"]
   },
@@ -67,7 +67,7 @@ const data = [
     name: 'Ozoude Solar',
     category: 'shop',
     desc: 'Owned by a solar that sells solar panels and other related products',
-    github: 'https://github/Phenoo/Solar-',
+    github: 'https://github.com/Phenoo/Solar-',
     photo: Item14,
     tools: ["nextjs","sass", "sanity"]
     },
@@ -76,7 +76,7 @@ const data = [
     name: 'desco.com',
     category: 'sports',
     desc: "Real deal here, This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
-    github: 'https://github/Phenoo/alba-sports',
+    github: 'https://github.com/Phenoo/alba-sports',
     photo: Item1,
     tools: ["react","firebase", "charts"]
   },
@@ -85,7 +85,7 @@ const data = [
     name: 'Salad',
     category: 'food',
     desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them. Aesthestically pleasing and good graphics. View!',
-    github: 'https://github/Phenoo/Food-App',
+    github: 'https://github.com/Phenoo/Food-App',
     photo: Item2,
     tools: ["react","styled-components"]
   },
@@ -94,7 +94,7 @@ const data = [
     name: 'Quran-app',
     category: 'religion',
     desc: ' if you are muslim or interested in reading the quran, This is for you!. I made this using a quran API. It"s fully functional, Read your quran here, Allah Akbar',
-    github: 'https://github/Phenoo/quran-demo-app',
+    github: 'https://github.com/Phenoo/quran-demo-app',
     photo: Item3,
     tools: ["react","styled-components", "API"]
   },
@@ -103,7 +103,7 @@ const data = [
     name: 'Lampnet solution trial',
     category: 'Trial project',
     desc: 'This was my trial project at Lampnet solutions for their internship program.',
-    github: 'https://github/Phenoo/Lawfirm',
+    github: 'https://github.com/Phenoo/Lawfirm',
     photo: Trial,
     tools: ["react","sass"]
   },
@@ -112,7 +112,7 @@ const data = [
     name: 'justice',
     category: 'law & judiciary',
     desc: 'This is a website where you can get services of lawyers and even get free consultation. No one can intimidate and go scot-free as far this exists.',
-    github: 'https://github/Phenoo/Lawfirm',
+    github: 'https://github.com/Phenoo/Lawfirm',
     photo: Item9,
     tools: ["react","sass"]
   },
@@ -121,7 +121,7 @@ const data = [
     name: 'refugee aid group',
     category: 'charity',
     desc: 'This is for charity organization where you can receive newsa bout refugees, help refugees and donate to them',
-    github: 'https://github/Phenoo/Refugeeaidgroup',
+    github: 'https://github.com/Phenoo/Refugeeaidgroup',
     photo: Item4,
     tools: ["HTML", "SASS", "Javascript"]
   },
@@ -209,10 +209,10 @@ const Work = () => {
                       <img src={photo} alt="work" />
                     </a>
                     <div className="direct-links">
-                    <a href={`${github}`}>
+                    <a href={`${github}`} target='_blank' rel='noreferrer' aria-label={`${github}`}>
                         <AiOutlineGithub />
                       </a>
-                      <a href={`${url}`}>
+                      <a href={`${url}`} target='_blank' rel='noreferrer' aria-label={`${url}`}>
                         <BsFillArrowUpRightSquareFill />
                       </a>
                     </div>

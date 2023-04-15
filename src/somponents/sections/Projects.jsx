@@ -22,7 +22,7 @@ const data = [
     name: 'Woodwork ',
     category: 'commerce',
     desc: "An online retailer that specializes in selling furntiure. It typically displays a wide range of interior products organized into categories for easy navigation.",
-    github: 'https://github/Phenoo/Woodwork',
+    github: 'https://github.com/Phenoo/Woodwork',
     photo: Item15,
     tools: ["nextjs", "tailwind css", "sanity"]
   },
@@ -31,7 +31,7 @@ const data = [
     name: 'godson art',
     category: 'arts',
     desc: "This is an artist/painter portfolio where he shows his works and sell them too. I use sanity for the content management.",
-    github: 'https://github/Phenoo/artist',
+    github: 'https://github.com/Phenoo/artist',
     photo: Item12,
     tools: ["react", "sanity", "paypal"]
   },
@@ -40,7 +40,7 @@ const data = [
     name: 'Flower Shop',
     category: 'shop',
     desc: 'This is an E-Shop where you can get your flowers, Content managed by sanity cms',
-    github: 'https://github/Phenoo/Flower',
+    github: 'https://github.com/Phenoo/Flower',
     photo: Item13,
     tools: ["react","sass", "sanity"]
   },
@@ -49,7 +49,7 @@ const data = [
     name: 'Ozoude Solar',
     category: 'shop',
     desc: 'Owned by a solar company that sells solar panels and other related products',
-    github: 'https://github/Phenoo/Solar-',
+    github: 'https://github.com/Phenoo/Solar-',
     photo: Item14,
     tools: ["nextjs","sass", "sanity"]
     },
@@ -58,7 +58,7 @@ const data = [
     name: 'desco.com',
     category: 'sports',
     desc: "This is website of a club called 'Desco.com', it is authenticated with firebase where interested people can sign up and join. It also has a profile dashboard, You should enjoy this absolutely. Sign Up and Enjoy Desco.",
-    github: 'https://github/Phenoo/alba-sports',
+    github: 'https://github.com/Phenoo/alba-sports',
     photo: Item1,
     tools: ["react","firebase", "charts"]
   },
@@ -67,7 +67,7 @@ const data = [
     name: 'Salad',
     category: 'food',
     desc: 'This is a demo for a web-app `Salad` where customers can order food and it will be delivered to them. Aesthestically pleasing and good graphics. View!',
-    github: 'https://github/Phenoo/Food-App',
+    github: 'https://github.com/Phenoo/Food-App',
     photo: Item2,
     tools: ["react","styled-components"]
   },
@@ -114,10 +114,10 @@ const Projects = () => {
                           </div>                          
                         </div>
                         <div className="svg">
-                          <a href={github}>
+                          <a href={github} aria-label='Github' rel='noreferrer' target='_blank'>
                             <AiOutlineGithub />
                           </a>
-                          <a href={url}>
+                          <a href={url} aria-label='Website' rel='noreferrer' target='_blank' >
                             <BsFillArrowUpRightSquareFill />
                           </a>
                         </div>
