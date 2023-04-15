@@ -64,6 +64,7 @@ const data = [
   },
     {
     url: "https://solar-blue.vercel.app/",
+    github: "https://github.com/Phenoo/Solar-",
     name: 'Ozoude Solar',
     category: 'shop',
     desc: 'Owned by a solar that sells solar panels and other related products',
